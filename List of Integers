@@ -53,10 +53,13 @@ class List{
 	void Print(Node* x); //recursivly print all elements
 	void Destroy(Node* n); //recursivly destroy all elements of the list 
 public:
+	//constructor
 	List(){root = NULL; size = 0;}
+	//destructor
 	~List();
 	//check whether the list is empty or not
 	bool isEmpty(){return root == NULL;}
+	//get the current size of the list
 	unsigned int Size(){return size;}
 	//insert at the end of the list and return a pointer to it
 	Node* Insert(int x); 
@@ -107,10 +110,11 @@ int List::Find(int x){
 		i++;
 	}
 	if (currNode) return i;
-	return -1;
+	return -1; //indicator
 }
 
-Node* List::getKth(int id){
+Node* List::getKth(int id){ //indicator, can't use a specific indicator because the type isn't known.
+	Node<T>* currNode = root;
 	if (id < 0 || id >= size) return NULL;
 	Node* currNode = root;
 	int i = 0;
@@ -140,7 +144,7 @@ int List::Delete(int x){
 		delete currNode;
 		return i;
 	}
-	return -1;
+	return -1; //indicator
 }
 
 void List::DeleteKth(int id){
