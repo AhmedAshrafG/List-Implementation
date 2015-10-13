@@ -114,7 +114,6 @@ int List::Find(int x){
 }
 
 Node* List::getKth(int id){ //indicator, can't use a specific indicator because the type isn't known.
-	Node<T>* currNode = root;
 	if (id < 0 || id >= size) return NULL;
 	Node* currNode = root;
 	int i = 0;
