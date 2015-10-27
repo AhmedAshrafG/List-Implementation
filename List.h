@@ -1,3 +1,13 @@
+/*
+Created 13 October 2015
+Author : Ahmed Ashraf Gamal
+Notes : 
+-This version of list only supports prespecified abstract data type.
+-This is a prototype for a college assignment.
+-Functions like void Print(Node* x), void Destroy(Node* n)
+were meant to be private in order to be used by member functions only (can't be used by the user directly).
+*/
+
 #pragma once
 
 class Node{
